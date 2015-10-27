@@ -2,7 +2,7 @@ require 'spec_helper'
 module TheBigUsernameBlacklist
   describe 'Data' do
     describe '#match?' do
-      subject { TheBigUsernameBlacklist::Data.new.match?(username) }
+      subject { TheBigUsernameBlacklist::Data.default.match?(username) }
 
       context 'matched username' do
         let(:username) { 'administrator' }
