@@ -9,17 +9,17 @@ describe TheBigUsernameBlacklist do
       subject { TheBigUsernameBlacklist.valid?(username) }
       context 'matched username' do
         let(:username) { 'administrator' }
-        it { should be true }
+        it { should be false }
       end
 
       context 'matched optional username' do
         let(:username) { 'james' }
-        it { should be true }
+        it { should be false }
       end
 
       context 'unmatched username' do
         let(:username) { 'ababa' }
-        it { should be false }
+        it { should be true }
       end
     end
 
@@ -29,17 +29,17 @@ describe TheBigUsernameBlacklist do
 
       context 'matched username' do
         let(:username) { 'administrator' }
-        it { should be true }
+        it { should be false }
       end
 
       context 'matched optional username' do
         let(:username) { 'james' }
-        it { should be true }
+        it { should be false }
       end
 
       context 'unmatched username' do
         let(:username) { 'ababa' }
-        it { should be false }
+        it { should be true }
       end
     end
   end

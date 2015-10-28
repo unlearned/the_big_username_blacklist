@@ -6,12 +6,12 @@ describe TheBigUsernameBlacklist do
 
     context 'matched username' do
       let(:username) { 'administrator' }
-      it { should be true }
+      it { should be false }
     end
 
     context 'unmatched username' do
       let(:username) { 'ababa' }
-      it { should be false }
+      it { should be true }
     end
   end
 end

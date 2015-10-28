@@ -13,7 +13,7 @@ module TheBigUsernameBlacklist
   end
 
   def self.valid?(username)
-    data.match?(username) || optional_data.match?(username)
+    !(data.match?(username) || optional_data.match?(username))
   end
 
   def self.configure
