@@ -1,6 +1,11 @@
 # TheBigUsernameBlacklist
 
-TODO: Write a gem description
+This library lets you validate usernames against a blacklist. The blacklist data is based on the data from The-Big-Username-Blacklist and contains privilege, programming terms, section names, financial terms and actions.
+
+see also...
+- https://github.com/marteinn/The-Big-Username-Blacklist
+- https://pypi.python.org/pypi/the_big_username_blacklist
+- https://www.npmjs.com/package/the-big-username-blacklist
 
 ## Installation
 
@@ -20,7 +25,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Validating a username is easy, if the word is in the blacklist, return False (validation failed), otherwise True.
+Example:
+
+```
+> require 'the_big_username_blacklist
+> TheBigUsernameBlacklist.valid? 'martin'
+true
+>  TheBigUsernameBlacklist.valid? 'root'
+false
+```
 
 ## Contributing
 
