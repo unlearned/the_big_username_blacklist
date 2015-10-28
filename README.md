@@ -29,12 +29,28 @@ Validating a username is easy, if the word is in the blacklist, return False (va
 Example:
 
 ```
-> require 'the_big_username_blacklist
+> require 'the_big_username_blacklist'
 > TheBigUsernameBlacklist.valid? 'martin'
 true
 >  TheBigUsernameBlacklist.valid? 'root'
 false
 ```
+
+
+If you want to use it as instance method, it's easy.
+
+```
+require 'the_big_username_blacklist'
+class YourClass
+  include TheBigUsernameBlacklist
+end
+
+YourClass.new.username_valid?('martin')
+```
+
+
+
+
 
 ## Contributing
 
