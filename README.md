@@ -38,9 +38,9 @@ false
 
 
 If you want to use it as instance method, it's easy.
+Example:
 
-```
-require 'the_big_username_blacklist'
+```ruby
 class YourClass
   include TheBigUsernameBlacklist
 end
@@ -49,8 +49,18 @@ YourClass.new.username_valid?('martin')
 ```
 
 
+You want to add optional blacklist, you can use configuration on rails initializer
+Example: `config/initializers/the_big_username_blacklist.rb`
 
+```ruby
+TheBigUsernameBlacklist.configure do |config|
+  config.optional_usernames = %w(james)
+end
+```
 
+```ruby
+TheBigUsernameBlacklist.valid? 'james' # => false
+```
 
 ## Contributing
 

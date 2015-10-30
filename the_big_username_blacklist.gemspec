@@ -7,9 +7,15 @@ Gem::Specification.new do |spec|
   spec.version       = TheBigUsernameBlacklist::VERSION
   spec.authors       = ['Takashi Uesugi']
   spec.email         = ['tksuesg@gmail.com']
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ''
+  spec.summary       = %q{This library lets you validate usernames against a blacklist.}
+  spec.description   = %q{This library lets you validate usernames against a blacklist. The blacklist data is based on the data from The-Big-Username-Blacklist and contains privilege, programming terms, section names, financial terms and actions.
+
+see also...
+- https://github.com/marteinn/The-Big-Username-Blacklist
+- https://pypi.python.org/pypi/the_big_username_blacklist
+- https://www.npmjs.com/package/the-big-username-blacklist
+}
+  spec.homepage      = 'https://github.com/unlearned/the_big_username_blacklist'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
